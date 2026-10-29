@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Generic illustrated male doctor avatar">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcefe6"/><stop offset="1" stop-color="#b8d7c8"/></linearGradient></defs>
+  <rect width="96" height="96" rx="24" fill="url(#bg)"/>
+  <path d="M15 96c2-19 13-29 33-29s31 10 33 29" fill="#39715f"/>
+  <path d="M31 70l17 16 17-16-7-8H38z" fill="#fff"/>
+  <rect x="37" y="52" width="22" height="21" rx="10" fill="#b97854"/>
+  <ellipse cx="48" cy="40" rx="21" ry="25" fill="#d59a73"/>
+  <path d="M27 41c-3-20 7-31 22-31 16 0 24 12 20 31l-3 7-3-19c-11 1-20-2-28-7l-4 27z" fill="#343c3a"/>
+  <path d="M35 48c5 10 21 10 26 0-1 12-6 18-13 18s-12-6-13-18" fill="#493a35"/>
+  <circle cx="40" cy="41" r="1.6" fill="#28312e"/><circle cx="56" cy="41" r="1.6" fill="#28312e"/>
+  <path d="M44 50q4 3 8 0" fill="none" stroke="#754a3d" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M65 74l9 5-4 6-10-5z" fill="#e4eee8"/><path d="M69 76l3 2-7 11-3-2z" fill="#4a8a70"/>
+</svg>
+
