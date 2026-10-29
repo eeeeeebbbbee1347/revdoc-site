@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7faf8">
+  <meta name="description" content="Explore patient feedback about doctors in Bangladesh.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>RevDoc — Find care with confidence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="RevDoc home"><span class="brand-mark">R<span>+</span></span><span>Rev<span class="brand-accent">Doc</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#find">Find a doctor</a><a href="#how">How it works</a></nav>
+    <button class="button button-dark nav-review" data-open-review>Write a review <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> PATIENT EXPERIENCES, MADE USEFUL</div>
+        <h1>Care starts with<br><em>being heard.</em></h1>
+        <p>Explore patient feedback and find a doctor who feels right for you. Your experience can help someone else make a more informed choice.</p>
+        <a class="button button-dark hero-cta" href="#find">Explore doctors <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="lock-icon">◉</span> Reviews are shown without patient names. Read our <a href="#privacy">privacy note</a>.</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a patient and clinician">
+        <div class="art-blob"></div>
+        <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+        <div class="doctor-card"><div class="doctor-card-top"><div class="avatar avatar-hero">Dr</div><div><b>Care that listens</b><small>Patient experience matters</small></div><span class="verified">✦</span></div><div class="mini-stars">★★★★★ <small>Patient feedback</small></div><div class="card-line"></div><div class="card-line short"></div></div>
+        <div class="leaf leaf-a"></div><div class="leaf leaf-b"></div><div class="leaf leaf-c"></div>
+        <div class="figure figure-doctor"><div class="head"></div><div class="hair"></div><div class="body"></div><div class="coat"></div></div>
+        <div class="figure figure-patient"><div class="head"></div><div class="hair"></div><div class="body"></div></div>
+        <div class="plant-pot"><i></i><i></i><i></i><b></b></div>
+        <div class="floating-rating"><span>★★★★★</span><small>Every voice counts</small></div>
+      </div>
+    </section>
+
+    <section class="search-panel" id="find">
+      <div class="search-heading"><div><span class="section-kicker">YOUR NEXT STEP</span><h2>Find care that fits you</h2></div><span class="demo-chip">Prototype · sample profiles</span></div>
+      <div class="search-controls">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Doctor, specialty or hospital" autocomplete="off"><kbd>Ctrl K</kbd></label>
+        <label class="select-wrap"><span class="sr-only">Specialty</span><select id="specialty"><option value="">All specialties</option></select><span>⌄</span></label>
+        <label class="select-wrap"><span class="sr-only">Location</span><select id="location"><option value="">All locations</option></select><span>⌄</span></label>
+      </div>
+      <div class="results-toolbar"><div><strong id="result-count">0</strong> doctors to explore</div><label>Sort by <select id="sort"><option value="recommended">Recommended</option><option value="rating">Highest rated</option><option value="reviews">Most reviewed</option></select></label></div>
+      <div class="doctor-grid" id="doctor-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No profiles found</h3><p>Try another name, specialty, or location.</p></div>
+      <details class="moderation-panel"><summary>Prototype review queue <span id="pending-count">0 pending</span></summary><p>Local prototype only. Automated screening flags patterns for human review; it cannot decide whether a review is true. Reviews here are not public until reviewed.</p><div id="moderation-list"></div></details>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="how-intro"><span class="section-kicker">A MORE HUMAN WAY TO CHOOSE</span><h2>Useful stories.<br><em>Thoughtful choices.</em></h2><p>RevDoc makes patient experiences easier to understand and provides a fair, respectful space for feedback.</p></div>
+      <div class="steps"><article><div class="step-number">01</div><div class="step-icon">⌕</div><h3>Explore profiles</h3><p>Browse specialties, locations, and patient feedback in one place.</p></article><article><div class="step-number">02</div><div class="step-icon">♡</div><h3>Share your visit</h3><p>Rate communication, respect, and helpfulness. Patient names are not displayed.</p></article><article><div class="step-number">03</div><div class="step-icon">✦</div><h3>Keep it constructive</h3><p>Automated checks can flag unusual patterns for review; they cannot prove a story is true.</p></article></div>
+    </section>
+    <section class="contribute"><div><span class="section-kicker">YOUR VOICE HELPS</span><h2>Had a visit recently?</h2><p>A thoughtful review can make the next step easier for someone else.</p></div><button class="button button-light" data-open-review>Share your visit <span>↗</span></button></section>
+    <footer id="privacy"><a class="brand footer-brand" href="#top"><span class="brand-mark">R<span>+</span></span><span>Rev<span class="brand-accent">Doc</span></span></a><p>Patient perspectives for more informed choices.</p><div class="footer-note"><b>Prototype privacy note</b><br>This prototype stores submitted reviews in this browser only. Names are not shown on the page, but this does not guarantee a reviewer cannot be identified. Do not enter real patient details or sensitive health information.</div><span class="copyright">© 2026 RevDoc · Prototype</span></footer>
+  </main>
+
+  <dialog id="review-dialog" class="review-dialog">
+    <form method="dialog" class="dialog-close-row"><button class="icon-button" aria-label="Close">×</button></form>
+    <div class="dialog-content"><span class="section-kicker">YOUR EXPERIENCE MATTERS</span><h2>Write a review</h2><p class="dialog-subtitle">Help others understand what a visit may feel like.</p>
+      <form id="review-form">
+        <label class="field-label" for="review-doctor">Doctor</label><select id="review-doctor" required></select>
+        <div class="rating-field"><label class="field-label">Overall rating</label><div class="star-picker" role="radiogroup" aria-label="Overall rating"><button type="button" data-rating="1" aria-label="1 star">☆</button><button type="button" data-rating="2" aria-label="2 stars">☆</button><button type="button" data-rating="3" aria-label="3 stars">☆</button><button type="button" data-rating="4" aria-label="4 stars">☆</button><button type="button" data-rating="5" aria-label="5 stars">☆</button></div><small id="rating-hint">Choose a rating</small></div>
+        <div class="category-ratings"><label>Communication <select name="communication" required><option value="">Rate</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label><label>Respect <select name="respect" required><option value="">Rate</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label><label>Helpfulness <select name="helpfulness" required><option value="">Rate</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label></div>
+        <label class="field-label" for="review-text">Your experience <span class="optional">optional</span></label><textarea id="review-text" maxlength="500" rows="4" placeholder="Focus on your own experience. Please avoid names, diagnoses, or claims you cannot verify."></textarea><div class="text-count"><span id="text-count">0</span>/500</div>
+        <label class="check-row"><input type="checkbox" id="visit-confirm" required><span>I confirm this reflects my own visit and is shared in good faith.</span></label>
+        <p class="privacy-small">Your name is not shown. This prototype does not verify visits or provide legal anonymity. Reviews may be held for a human check if automated screening flags a concern.</p>
+        <button class="button button-dark submit-review" type="submit">Submit review <span>↗</span></button>
+      </form>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
